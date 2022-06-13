@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <title>Xuan Hinh</title>
+    </head>
+    <body >
+        <form background="https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg">
+            <h2 align="center">Register</h2>
+            <table cellspacing="0" border="1" bordercolor="red" width="100%">
+                <tr>
+                    <th>
+                        <label for="fullname">Full Name</label>
+                    </th>
+                    <th colspan="2">
+                        <input
+                            size="70"
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="fullname..."
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="username">User Name</label>
+                    </th>
+                    <th colspan="2">
+                        <input
+                            size="70"
+                            id="username"
+                            name="username"
+                            type="text"
+                            placeholder="username..."
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="password">Password</label>
+                    </th>
+                    <th colspan="2">
+                        <input
+                            size="70"
+                            id="password"
+                            name="password"
+                            type="text"
+                            placeholder="password..."
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="confirmpassword">Confirm Password</label>
+                    </th>
+                    <th colspan="2">
+                        <input
+                            size="70"
+                            id="confirmpassword"
+                            name="confirmpassword"
+                            type="text"
+                            placeholder="confirmpassword..."
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label>Ngày sinh</label>
+                    </th>
+                    <th colspan="2">
+                        <select name=Date" size="1">
+                            <options>---Date---</options>
+                            <options value="1">1</options>
+                        </select>
+    
+                        <select name="Month" id="Month">
+                            <options>---Month---</options>
+                            <options value="1">1</options>
+                        </select>
+                        <select name="Year" id="Year">
+                            <options>---Year---</options>
+                            <options value="1">1</options>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label>Gender</label>
+                    </th>
+                    <th colspan="2">
+                        <label for="male">Male</label>
+                        <input id="male" name="gender" value="male" type="radio" />
+                        <label for="female">Female</label>
+                        <input
+                            id="female"
+                            value="female"
+                            name="gender"
+                            type="radio"
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="address">Address</label>
+                    </th>
+                    <th colspan="2">
+                        <textarea
+                            id="address"
+                            name="address"
+                            type="text"
+                            cols="70"
+                            rows="5"
+                        >
+                        </textarea>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="avatar">Avatar</label>
+                    </th>
+                    <th colspan="2">
+                        <input
+                            id="avatar"
+                            name="avatar"
+                            type="file"
+                            multiple="false"
+                        />
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label>Favorite</label>
+                    </th>
+                    <th colspan="2" rowspan="2">
+                        <div>
+                            <label for="xemphim">Xem phim</label>
+                            <input
+                                id="xemphim"
+                                name="favorite"
+                                value="xemphim"
+                                type="checkbox"
+                            />
+                            <label for="docbao">Đọc báo</label>
+                            <input
+                                id="docbao"
+                                name="favorite"
+                                value="docbao"
+                                type="checkbox"
+                            />
+                            <label for="nghenhac">Nghe nhạc</label>
+                            <input
+                                id="nghenhac"
+                                name="favorite"
+                                value="nghenhac"
+                                type="checkbox"
+                            />
+                        </div>
+                        <div>
+                            <label for="dabong">Đá bóng</label>
+                            <input
+                                id="dabong"
+                                name="favorite"
+                                value="dabong"
+                                type="checkbox"
+                            />
+                            <label for="shopping">Shopping</label>
+                            <input
+                                id="shopping"
+                                name="favorite"
+                                value="shopping"
+                                type="checkbox"
+                            />
+                            <label for="dulich">Du lịch</label>
+                            <input
+                                id="dulich"
+                                name="favorite"
+                                value="dulich"
+                                type="checkbox"
+                            />
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

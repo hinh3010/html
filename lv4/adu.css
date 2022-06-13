@@ -1,0 +1,30 @@
+.container {
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 4px;
+
+    height: 80vh;
+    width: 400px;
+    margin: 50px auto;
+}
+
+.container button {
+    display: block;
+    margin: 0 auto;
+}
+
+.container .form-wrap {
+    padding: 10px 20px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.container .form-wrap div {
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+.container .form-wrap input {
+    align: right !important;
+} */

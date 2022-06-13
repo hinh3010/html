@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <title>Xuan Hinh</title>
+        <style>
+            ::-webkit-scrollbar {
+                width: 10px;
+                height: 6px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background: linear-gradient(
+                    70deg,
+                    var(--primary-color),
+                    rgb(247, 47, 170)
+                );
+            }
+
+            body {
+                background: linear-gradient(to right, #4daf54, #3d8880);
+                overflow-y: overlay hidden;
+            }
+        </style>
+    </head>
+
+    <body style="overflow: hidden overlay">
+        <h1>adu</h1>
+        <table border="1px" bordercolor="red" width="100%">
+            <tr>
+                <th>STT</th>
+                <th>Ten</th>
+                <th>Tuoi</th>
+            </tr>
+            <tbody id="content"></tbody>
+        </table>
+        <embed
+            src="https://www.youtube.com/watch?v=NuWAl7-Vkwk&list=RDNuWAl7-Vkwk&start_radio=1"
+            type=""
+        />
+    </body>
+    <script>
+        const listItem = [
+            { id: 1, name: "Huong Tran", age: 23 },
+            { id: 2, name: "Hinh Tran", age: 23 },
+            { id: 3, name: "Le Tran Trung Hieu", age: 23 },
+            { id: 4, name: "Tran Thi My", age: 23 },
+        ];
+        const content = document.querySelector("#content");
+        const htmls = listItem.map((item) => {
+            return `
+                <tr align="center">
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.age}</td>
+                </tr>
+                `;
+        });
+        content.innerHTML = htmls.join("");
+    </script>
+</html>

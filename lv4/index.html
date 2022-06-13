@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./adu.css" />
+        <title>Xuan Hinh</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Logout</h1>
+            <form id="formLogin" action="#" method="post">
+                <div class="form-wrap">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Full Name ..."
+                    />
+                </div>
+
+                <div class="form-wrap">
+                    <label for="username">User Name</label>
+                    <input
+                        type="username"
+                        id="username"
+                        name="username"
+                        placeholder="User Name ..."
+                    />
+                </div>
+
+                <div class="form-wrap">
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="password ..."
+                    />
+                </div>
+
+                <div class="form-wrap">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input
+                        type="confirmpassword"
+                        id="confirmpassword"
+                        name="confirmpassword"
+                        placeholder="confirm password ..."
+                    />
+                </div>
+
+                <p>Gender</p>
+                <div class="form-wrap">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male" />
+                </div>
+                <div class="form-wrap">
+                    <label for="gender">Female</label>
+                    <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                    />
+                </div>
+
+                <p>Favorite</p>
+                <div class="form-wrap">
+                    <label for="playgirl">Play Girl</label>
+                    <input
+                        id="playgirl"
+                        type="checkbox"
+                        name="favorite"
+                        value="playgirl"
+                    />
+                </div>
+                <div class="form-wrap">
+                    <label for="games">Games</label>
+                    <input
+                        id="games"
+                        type="checkbox"
+                        name="favorite"
+                        value="games"
+                    />
+                </div>
+                <br /><br />
+
+                <br />
+                <button>Logout now</button>
+                <br />
+                <a href="#">login</a>
+            </form>
+        </div>
+    </body>
+    <script>
+        const formLogin = document.getElementById("formLogin");
+        console.log(formLogin);
+        formLogin.addEventListener("submit", (e) => {
+            e.preventDefault();
+        });
+    </script>
+</html>
