@@ -7,184 +7,235 @@
         <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
         <title>Xuan Hinh</title>
     </head>
-    <body >
-        <form background="https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg">
+    <body
+        style="color: wheat"
+        background="https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg"
+    >
+        <form id="formRegister">
             <h2 align="center">Register</h2>
             <table cellspacing="0" border="1" bordercolor="red" width="100%">
-                <tr>
-                    <th>
-                        <label for="fullname">Full Name</label>
-                    </th>
-                    <th colspan="2">
-                        <input
-                            size="70"
-                            id="fullname"
-                            name="fullname"
-                            type="text"
-                            placeholder="fullname..."
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label for="username">User Name</label>
-                    </th>
-                    <th colspan="2">
-                        <input
-                            size="70"
-                            id="username"
-                            name="username"
-                            type="text"
-                            placeholder="username..."
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label for="password">Password</label>
-                    </th>
-                    <th colspan="2">
-                        <input
-                            size="70"
-                            id="password"
-                            name="password"
-                            type="text"
-                            placeholder="password..."
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label for="confirmpassword">Confirm Password</label>
-                    </th>
-                    <th colspan="2">
-                        <input
-                            size="70"
-                            id="confirmpassword"
-                            name="confirmpassword"
-                            type="text"
-                            placeholder="confirmpassword..."
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label>Ngày sinh</label>
-                    </th>
-                    <th colspan="2">
-                        <select name=Date" size="1">
-                            <options>---Date---</options>
-                            <options value="1">1</options>
-                        </select>
-    
-                        <select name="Month" id="Month">
-                            <options>---Month---</options>
-                            <options value="1">1</options>
-                        </select>
-                        <select name="Year" id="Year">
-                            <options>---Year---</options>
-                            <options value="1">1</options>
-                        </select>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label>Gender</label>
-                    </th>
-                    <th colspan="2">
-                        <label for="male">Male</label>
-                        <input id="male" name="gender" value="male" type="radio" />
-                        <label for="female">Female</label>
-                        <input
-                            id="female"
-                            value="female"
-                            name="gender"
-                            type="radio"
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label for="address">Address</label>
-                    </th>
-                    <th colspan="2">
-                        <textarea
-                            id="address"
-                            name="address"
-                            type="text"
-                            cols="70"
-                            rows="5"
-                        >
-                        </textarea>
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label for="avatar">Avatar</label>
-                    </th>
-                    <th colspan="2">
-                        <input
-                            id="avatar"
-                            name="avatar"
-                            type="file"
-                            multiple="false"
-                        />
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        <label>Favorite</label>
-                    </th>
-                    <th colspan="2" rowspan="2">
-                        <div>
-                            <label for="xemphim">Xem phim</label>
+                <tbody align="left">
+                    <tr>
+                        <th>
+                            <label for="fullname">Full Name</label>
+                        </th>
+                        <th colspan="2">
                             <input
-                                id="xemphim"
-                                name="favorite"
-                                value="xemphim"
-                                type="checkbox"
+                                size="70"
+                                id="fullname"
+                                name="fullname"
+                                type="text"
+                                placeholder="fullname..."
                             />
-                            <label for="docbao">Đọc báo</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="username">User Name</label>
+                        </th>
+                        <th colspan="2">
                             <input
-                                id="docbao"
-                                name="favorite"
-                                value="docbao"
-                                type="checkbox"
+                                size="70"
+                                id="username"
+                                name="username"
+                                type="text"
+                                placeholder="username..."
                             />
-                            <label for="nghenhac">Nghe nhạc</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="password">Password</label>
+                        </th>
+                        <th colspan="2">
                             <input
-                                id="nghenhac"
-                                name="favorite"
-                                value="nghenhac"
-                                type="checkbox"
+                                size="70"
+                                id="password"
+                                name="password"
+                                type="text"
+                                placeholder="password..."
                             />
-                        </div>
-                        <div>
-                            <label for="dabong">Đá bóng</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="confirmpassword"
+                                >Confirm Password</label
+                            >
+                        </th>
+                        <th colspan="2">
                             <input
-                                id="dabong"
-                                name="favorite"
-                                value="dabong"
-                                type="checkbox"
+                                size="70"
+                                id="confirmpassword"
+                                name="confirmpassword"
+                                type="text"
+                                placeholder="confirmpassword..."
                             />
-                            <label for="shopping">Shopping</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>Ngày sinh</label>
+                        </th>
+                        <th colspan="2">
+                            <select name="Date" id="Date">
+                                <option>---Date---</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">...</option>
+                                <option value="30">30</option>
+                            </select>
+
+                            <select name="Month" id="Month">
+                                <option>---Month---</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select name="Year" id="Year">
+                                <option>---Year---</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>Gender</label>
+                        </th>
+                        <th colspan="2">
+                            <label for="male">Male</label>
                             <input
-                                id="shopping"
-                                name="favorite"
-                                value="shopping"
-                                type="checkbox"
+                                id="male"
+                                name="gender"
+                                value="male"
+                                type="radio"
                             />
-                            <label for="dulich">Du lịch</label>
+                            <label for="female">Nữ giới</label>
                             <input
-                                id="dulich"
-                                name="favorite"
-                                value="dulich"
-                                type="checkbox"
+                                id="female"
+                                value="female"
+                                name="gender"
+                                type="radio"
                             />
-                        </div>
-                    </th>
-                </tr>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="address">Address</label>
+                        </th>
+                        <th colspan="2">
+                            <textarea
+                                id="address"
+                                name="address"
+                                type="text"
+                                value=""
+                                cols="70"
+                                rows="5"
+                            >
+                            </textarea>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for="avatar">Avatar</label>
+                        </th>
+                        <th colspan="2">
+                            <input
+                                id="avatar"
+                                name="avatar"
+                                type="file"
+                                multiple="false"
+                            />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label>Favorite</label>
+                        </th>
+                        <th colspan="2" rowspan="2">
+                            <table>
+                                <label for="xemphim">Xem phim</label>
+                                <input
+                                    id="xemphim"
+                                    name="favorite"
+                                    value="xemphim"
+                                    type="checkbox"
+                                />
+                                <label for="docbao">Đọc báo</label>
+                                <input
+                                    id="docbao"
+                                    name="favorite"
+                                    value="docbao"
+                                    type="checkbox"
+                                />
+                                <label for="nghenhac">Nghe nhạc</label>
+                                <input
+                                    id="nghenhac"
+                                    name="favorite"
+                                    value="nghenhac"
+                                    type="checkbox"
+                                />
+                            </table>
+                            <table>
+                                <label for="dabong">Đá bóng</label>
+                                <input
+                                    id="dabong"
+                                    name="favorite"
+                                    value="dabong"
+                                    type="checkbox"
+                                />
+                                <label for="shopping">Shopping</label>
+                                <input
+                                    id="shopping"
+                                    name="favorite"
+                                    value="shopping"
+                                    type="checkbox"
+                                />
+                                <label for="dulich">Du lịch</label>
+                                <input
+                                    id="dulich"
+                                    name="favorite"
+                                    value="dulich"
+                                    type="checkbox"
+                                />
+                            </table>
+                        </th>
+                    </tr>
+                </tbody>
             </table>
+            <div align="center">
+                <br /><br />
+                <button type="reset">refetch</button>
+                <button type="submit">Rigister</button>
+            </div>
         </form>
     </body>
+    <!-- <script>
+        const formRegister = document.getElementById("formRegister");
+        console.log(formRegister);
+        formRegister.addEventListener("submit", (e) => {
+            e.preventDefault();
+        });
+    </script> -->
 </html>
