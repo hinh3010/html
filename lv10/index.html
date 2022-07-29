@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>audio</title>
+    </head>
+    <body>
+        <div>
+            <span>Ho va ten : </span>
+            <span style="color: red" id="name"></span>
+            <br />
+            <span>Dia chi : </span>
+            <span style="color: red" id="address"></span>
+            <br />
+            <span>So dien thoai : </span>
+            <span style="color: red" id="phone"></span>
+            <hr />
+            <span>Ma hang : </span>
+            <span style="color: red" id="productId"></span>
+            <br />
+            <span>So luong : </span>
+            <span style="color: red" id="quantity"></span>
+            <br />
+            <span>Don gia : </span>
+            <span style="color: red" id="price"></span>
+            <br />
+            <span>Tong tien : </span>
+            <span style="color: red" id="total"></span>
+        </div>
+        <script>
+            document.getElementById("name").innerHTML = prompt("Ho va ten : ");
+            document.getElementById("address").innerHTML = prompt("Dia chi : ");
+            document.getElementById("phone").innerHTML =
+                prompt("So dien thoai : ");
+            document.getElementById("productId").innerHTML =
+                prompt("Ma hang : ");
+
+            const quantity = prompt("So luong : ");
+            document.getElementById("quantity").innerHTML = quantity;
+
+            const price = prompt("Don gia : ");
+            document.getElementById("price").innerHTML = price;
+
+            const total = Number.parseInt(price) * Number.parseInt(quantity);
+            document.getElementById("total").innerHTML =
+                total.toString() + "VND";
+        </script>
+    </body>
+</html>

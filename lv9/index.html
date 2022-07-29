@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link rel="stylesheet" href="./adu.css" /> -->
+        <style>
+            :root {
+                --textColor: #333;
+                --mainWidth: 1000px;
+            }
+            p {
+                margin: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+            }
+            .app {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* header */
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: var(--mainWidth);
+                margin: auto;
+                z-index: 999;
+                /* background-color: white; */
+                background: linear-gradient(
+                    -180deg,
+                    #f65749,
+                    rgb(224, 127, 95)
+                );
+            }
+
+            .header marquee {
+                height: 50px;
+                display: flex;
+                align-items: center;
+            }
+
+            .header .title {
+                color: var(--textColor);
+                margin: 0;
+            }
+
+            .header .text {
+                float: right;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                padding: 10px 20px;
+            }
+
+            .header .text .hotline,
+            .header .text .address {
+                padding: 0;
+                margin: 0 0 0 20px;
+                color: var(--textColor);
+                font-weight: bold;
+            }
+
+            /* navbar */
+
+            .navbar {
+                padding: 40px 20px 0;
+                background: linear-gradient(to right, #4daf54, #54ff45);
+            }
+
+            .navbar .menu-item {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .navbar .menu-item .item {
+                margin-right: 20px;
+                padding: 10px 20px;
+                position: relative;
+            }
+            .navbar .menu-item .item:hover a {
+                font-weight: bold;
+            }
+
+            .navbar .menu-item .item:hover {
+                background-color: #f65749;
+            }
+
+            .navbar .menu-item .item a {
+                text-decoration: none;
+                color: var(--textColor);
+            }
+
+            .navbar .menu-item .item:hover > .sub-menu {
+                display: block;
+            }
+
+            .sub-menu {
+                position: absolute;
+                top: 43px;
+                left: -10px;
+                display: block;
+                padding: 4px 8px;
+                width: 200px;
+                color: var(--textColor);
+                background-color: white;
+                display: none;
+            }
+
+            .navbar .menu-item .sub-menu .sub-item {
+                padding: 10px 20px;
+                border: 1px solid #333;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            .navbar .menu-item .sub-menu .sub-item:hover {
+                background-color: #e3d6d6;
+            }
+
+            /* container */
+
+            .container {
+                width: var(--mainWidth);
+                margin: 140px auto 0;
+                height: 1200px;
+                background-color: white;
+            }
+            .main {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .card {
+                width: 30%;
+                height: 400px;
+                border: 1px solid #333;
+                border-radius: 4px;
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                margin: 10px 0;
+                overflow: hidden;
+            }
+
+            .card-body {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+            }
+
+            .card-img {
+                flex: 1;
+                height: 180px;
+                background-color: rgb(108, 117, 125);
+                cursor: pointer;
+                position: relative;
+            }
+
+            .card-img .card-img-title {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                display: none;
+                font-size: 30px;
+                color: black;
+                z-index: 3;
+            }
+
+            .card-img img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+
+            .card-img:hover img {
+                transition: all 0.5s linear;
+                /* transform: scale(1.2); */
+                transform: scale(-1, 1);
+            }
+
+            .card-img-panel {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                background-color: rgb(213, 213, 213);
+                display: none;
+            }
+
+            .card-img:hover .card-img-title {
+                display: block;
+            }
+            .card-img:hover .card-img-panel {
+                display: block;
+                opacity: 0.5;
+            }
+
+            .card-body .card-title {
+                margin-bottom: 0.75rem;
+                color: #f65749;
+                border-bottom: 1px solid #f65749;
+            }
+
+            .card-body .card-text {
+                font-size: 16px;
+            }
+
+            .card-body .card-price {
+                color: #f65749;
+                font-size: 20px;
+            }
+
+            .card-body .btn {
+                width: 100%;
+                padding: 10px 10px;
+                background-color: rgb(31, 207, 31);
+                border-radius: 4px;
+                border: 1px solid #333;
+                color: #f65749;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        </style>
+        <title>Xuan Hinh</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="header">
+                <marquee behavior="" direction="">
+                    <h1 class="title">Ipad Fake</h1>
+                </marquee>
+                <div class="text">
+                    <p class="hotline">Hotline :<span> 09 1642 ****</span></p>
+                    <p class="address">Address :<span> 29X3 - Ha Noi</span></p>
+                </div>
+                <div class="navbar">
+                    <ul class="menu-item">
+                        <li class="item"><a href="#">Trang chu</a></li>
+                        <li class="item">
+                            <a href="#">Gioi thieu</a>
+                            <ul class="sub-menu">
+                                <li class="sub-item">✔ Doi tac</li>
+                                <li class="sub-item">✔ Doi tac</li>
+                                <li class="sub-item">✔ Doi tac</li>
+                            </ul>
+                        </li>
+                        <li class="item">
+                            <a href="#">San pham</a>
+                            <ul class="sub-menu">
+                                <li class="sub-item">✔ Doi tac</li>
+                                <li class="sub-item">✔ Doi tac</li>
+                                <li class="sub-item">✔ Doi tac</li>
+                            </ul>
+                        </li>
+                        <li class="item"><a href="#">Khuyen mai</a></li>
+                        <li class="item"><a href="#">Gio hang</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="main">
+                    <!-- <div class="card">
+                        <div class="card-img">
+                            <img src="./ipad/ipad_air.png" />
+                            <h2 class="card-img-title">Ipad Air</h2>
+                            <div class="card-img-panel"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Card title</h3>
+                            <p class="card-text">
+                                Some quick example text to build on the card
+                                title and make up the bulk of the card's
+                                content.
+                            </p>
+                            <p class="card-price">
+                                <span>price : </span><span>5000$</span>
+                            </p>
+                            <button class="btn btn-buy">Buy now</button>
+                        </div>
+                    </div> -->
+                </div>
+                <hr />
+                <div
+                    class="footer"
+                    style="margin: 50px; display: block; text-align: center"
+                >
+                    ✔ Giao đề tài bài tập lớn môn Thiết kế Web 💖
+                </div>
+                <hr />
+            </div>
+        </div>
+    </body>
+    <script>
+        const listCard = [
+            {
+                name: "Ipad Air",
+                url: "./ipad/ipad_air.png",
+                price: "999",
+            },
+            {
+                name: "Ipad Mini",
+                url: "./ipad/ipad_mini.png",
+                price: "888",
+            },
+            {
+                name: "Ipad Pro",
+                url: "./ipad/ipad_pro.png",
+                price: "1111",
+            },
+            {
+                name: "Lenovo Tab M10",
+                url: "./ipad/lenovo_tab_m10.png",
+                price: "888",
+            },
+            {
+                name: "Surface Pro",
+                url: "./ipad/surface_pro.png",
+                price: "888",
+            },
+            {
+                name: "Tab S7",
+                url: "./ipad/tab_s7.png",
+                price: "888",
+            },
+            {
+                name: "Tab S7",
+                url: "./ipad/tab_s8.png",
+                price: "888",
+            },
+            {
+                name: "Xiaomi Pad5",
+                url: "./ipad/xiaomi_pad5.png",
+                price: "888",
+            },
+            {
+                name: "Surface Pro",
+                url: "./ipad/surface_pro.png",
+                price: "888",
+            },
+        ];
+        const main = document.querySelector(".main");
+        const htmls = listCard.map((card) => {
+            return `
+            <div class="card">
+                <div class="card-img">
+                    <img src="${card.url}" src="${card.name}"/>
+                    <h2 class="card-img-title">${card.name}</h2>
+                    <div class="card-img-panel"></div>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">${card.name}</h3>
+                    <p class="card-text">
+                        Some quick example text to build on the card
+                        title and make up the bulk of the card's
+                        content.
+                    </p>
+                    <p class="card-price">
+                        <span>price : </span><span>${card.price} $</span>
+                    </p>
+                    <button class="btn btn-buy">Buy now</button>
+                </div>
+            </div>
+            `;
+        });
+        main.innerHTML = htmls.join("");
+    </script>
+</html>

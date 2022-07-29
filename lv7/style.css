@@ -1,0 +1,39 @@
+body {
+    background-image: url("./liquid-cheese.png");
+    /* background-image: url("./parabolic-rectangle.png"); */
+    font-family: Proxima-Nova-Regular;
+}
+
+.container {
+    padding: 20px;
+    margin: 50px;
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    width: auto;
+    height: auto;
+
+    text-align: center;
+}
+
+.title {
+    padding: 0 50px 0;
+    color: deeppink;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.text {
+    color: rgb(93, 92, 92);
+    font-size: 20px;
+}
+
+.title:hover {
+    color: red;
+}
+
+.title:active {
+    font-size: 30px;
+}

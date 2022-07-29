@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .table-container {
+                width: 100%;
+                /* color: #515184;*/
+                border-collapse: collapse;
+            }
+            .table-header {
+                background-color: #d676a0;
+                color: #fff;
+            }
+            .table-tr {
+                display: table-row;
+                vertical-align: inherit;
+                border-color: inherit;
+                text-align: center;
+            }
+            .table-th,
+            .table-td {
+                vertical-align: bottom;
+                border-bottom: 2px solid #e1e1f0;
+                font-size: 13px;
+                font-weight: 500;
+                padding: 12px;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="color: deeppink; text-align: center">KET QUA HOC TAP</h1>
+        <table class="table-container" border="#515184">
+            <thead class="table-header">
+                <tr class="table-tr">
+                    <th class="table-th" scope="col" rowspan="2">Ho ten</th>
+                    <th class="table-th" colspan="2">Nam sinh</th>
+                    <th class="table-th" scope="col" rowspan="2">Diem TB</th>
+                    <th class="table-th" scope="col" rowspan="2">Xep Loai</th>
+                </tr>
+                <tr class="table-tr">
+                    <th class="table-th">Nam</th>
+                    <th class="table-th">Nu</th>
+                </tr>
+            </thead>
+            <tbody id="main">
+                <tr class="table-tr">
+                    <td class="table-td">Le thanh Xuan</td>
+                    <td class="table-td">1989</td>
+                    <td class="table-td">1989</td>
+                    <td class="table-td">8.8</td>
+                    <td class="table-td">Gioi</td>
+                </tr>
+            </tbody>
+            <tr class="table-tr">
+                <td style="text-align: center" class="table-td" colspan="3">
+                    Tong so sinh vien dup lop
+                </td>
+                <td
+                    style="text-align: right; padding-right: 50px"
+                    class="table-td"
+                    colspan="2"
+                >
+                    4 sinh vien
+                </td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        const main = document.querySelector("#main");
+        const htmls = [1, 2, 3, 4, 5].map(
+            (card) =>
+                `<tr class="table-tr">
+                <td class="table-td">Le thanh Xuan</td>
+                <td class="table-td"></td>
+                <td class="table-td">1989</td>
+                <td class="table-td">8.8</td>
+                <td class="table-td">Gioi</td>
+            </tr>
+            <tr class="table-tr">
+                <td class="table-td">Le thanh Xuan</td>
+                <td class="table-td">1989</td>
+                <td class="table-td"></td>
+                <td class="table-td">8.8</td>
+                <td class="table-td">Gioi</td>
+            </tr>`
+        );
+        main.innerHTML = htmls.join("");
+    </script>
+</html>
